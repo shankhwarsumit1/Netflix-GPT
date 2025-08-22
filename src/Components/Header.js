@@ -12,7 +12,7 @@ export const Header = () => {
            const navigate = useNavigate();
 
   useEffect(()=>{
-     onAuthStateChanged(auth,(user)=>{
+    const unsubscribe = onAuthStateChanged(auth,(user)=>{
       if(user){
         const {uid,email} = user;
         dispatch(addUser({uid,email}));
@@ -23,6 +23,9 @@ export const Header = () => {
         navigate('/')
       }
      })
+     
+     //unsubscribe when component unmounts
+     return ()=>unsubscribe();
    } ,[])
 
   const user = useSelector((store)=>store.user);

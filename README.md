@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### tmdb website needs
+
+Edit DNS Settings
+Scroll down → find DNS server assignment → click Edit.
+
+Switch to Manual
+
+Set IPv4: On
+
+Preferred DNS: 8.8.8.8
+
+Alternate DNS: 8.8.4.4
+(Or use Cloudflare → 1.1.1.1 and 1.0.0.1)
+
+Save & reconnect
+Disconnect and reconnect Wi-Fi/Ethernet.
