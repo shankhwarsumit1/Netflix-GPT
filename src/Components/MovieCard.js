@@ -2,7 +2,7 @@ import React from 'react'
 import { POSTER_BASEURL } from '../utils/constants'
 
 export const MovieCard = ({poster}) => {
-  
+  if(!poster)return ;
   return (
     <div className='p-2 w-1/6 rounded-sm flex-shrink-0'>
         <img className='rounded-sm'
